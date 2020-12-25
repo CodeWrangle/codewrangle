@@ -1,17 +1,7 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <div v-if="prerenderBuilt">Seeing this text is proof that app prerendering happened!</div>
-  </div>
-</template>
-
 <script>
-// @ is an alias to /src
 import { PRERENDER_KEY } from '../../config'
 
 export default {
-  name: 'Home',
   components: {
     HelloWorld: () => import('../components/HelloWorld.vue')
   },
@@ -37,3 +27,11 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="home">
+    <img alt="Vue logo" src="../assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div v-if="prerenderBuilt">Seeing this text is proof that app prerendering happened!</div>
+  </div>
+</template>
