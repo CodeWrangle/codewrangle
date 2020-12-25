@@ -2,6 +2,13 @@
 export default {
   metadata: {
     title: 'CodeWrangle',
+    // TODO this prevents google and other search engines from indexing until we are ready to launch
+    meta: [
+      {
+        name: 'robots',
+        content: 'noindex',
+      }
+    ],
   },
 }
 </script>
