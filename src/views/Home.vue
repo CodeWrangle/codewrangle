@@ -16,6 +16,18 @@ export default {
   components: {
     HelloWorld
   },
+  metadata: {
+    titleTemplate: '%s | Home',
+    meta: [
+      {
+        name: 'description',
+        content: 'Let us build your tools to your exact specifications',
+      }, {
+        name: 'keywords',
+        content: 'software engineer, website design',
+      },
+    ],
+  },
   data: () => ({
     prerenderBuilt: false,
   }),

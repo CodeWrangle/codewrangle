@@ -1,3 +1,11 @@
+<script>
+export default {
+  metadata: {
+    title: 'CodeWrangle',
+  },
+}
+</script>
+
 <template>
   <div id="myApp">
     <div id="nav">
