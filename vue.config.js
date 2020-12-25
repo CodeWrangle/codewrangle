@@ -43,4 +43,13 @@ module.exports = {
       config.plugins.push(...productionPlugins)
     }
   },
+  pluginOptions: {
+    sitemap: {
+      outputDir: './public',
+      urls: [
+        'https://www.codewranglesoftware.com/',
+        'https://www.codewranglesoftware.com/about',
+      ]
+    }
+  },
 }

@@ -5,9 +5,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "start": "node ./server.js",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "sitemap": "vue-cli-service sitemap",
+    "start": "node ./server.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -37,6 +38,7 @@
     "prerender-spa-plugin": "^3.4.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "vue-cli-plugin-sitemap": "~2.3.0",
     "vue-template-compiler": "^2.6.11"
   },
   "license": "UNLICENSED"
