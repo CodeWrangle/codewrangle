@@ -5,10 +5,10 @@ const helmet = require('helmet')
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: ['self', 'localhost:8080'],
-      scriptSrc: ['self', 'localhost:8080'],
-      imgSrc: ['self', 'localhost:8080'],
-      objectSrc: ['self', 'localhost:8080'],
+      defaultSrc: ['self', 'localhost:8080 codewranglesoftware.com'],
+      scriptSrc: ['self', 'localhost:8080 codewranglesoftware.com'],
+      imgSrc: ['self', 'localhost:8080 codewranglesoftware.com'],
+      objectSrc: ['self', 'localhost:8080 codewranglesoftware.com'],
       upgradeInsecureRequests: [],
     },
   })
