@@ -1,4 +1,4 @@
-# codewrangle
+# CodeWrangle Website
 
 ## Project setup
 ```
