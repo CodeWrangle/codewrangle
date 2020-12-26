@@ -1,6 +1,7 @@
 FROM node:latest as build-stage
 WORKDIR /app
 COPY package*.json ./
+COPY .nginx/ ./
 RUN yarn install
 RUN apt-get update && apt-get install -y \
     gconf-service \
@@ -47,5 +48,5 @@ RUN yarn run build
 FROM fholzer/nginx-brotli as production-stage
 RUN mkdir /app
 COPY --from=build-stage /app/dist /usr/share/nginx/html
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-COPY ./nginx/snippets/general-security-headers.conf /etc/nginx/snippets/general-security-headers.conf
+COPY --from=build-stage /app/.nginx/nginx.conf /etc/nginx/nginx.conf
+COPY --from=build-stage /app/.nginx/snippets/general-security-headers.conf /etc/nginx/snippets/general-security-headers.conf
