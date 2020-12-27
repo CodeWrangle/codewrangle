@@ -1,9 +1,9 @@
-version: '3'
+version: '3.7'
 networks:
   codewrangle-proxy:
 services:
   cw_website:
-    image: docker.pkg.github.com/CodeWrangle/codewrangle/codewrangle_website:latest
+    image: docker.pkg.github.com/codewrangle/codewrangle/codewrangle-website:latest
     container_name: codewrangle_website
     ports:
       - '80:80'
