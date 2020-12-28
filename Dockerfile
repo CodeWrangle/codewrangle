@@ -47,6 +47,11 @@ RUN yarn run build
 
 FROM fholzer/nginx-brotli as production-stage
 RUN mkdir /app
+
+# NGINX configuration
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 COPY --from=build-stage /app/.nginx/nginx.conf /etc/nginx/nginx.conf
 COPY --from=build-stage /app/.nginx/snippets/general-security-headers.conf /etc/nginx/snippets/general-security-headers.conf
+
+# LetsEncrypt/Certbot configuration
+COPY --from=build-stage /app/.letsencrypt/options-ssl-nginx.conf /etc/letsencrypt/options-ssl-nginx.conf
