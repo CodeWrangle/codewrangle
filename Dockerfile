@@ -54,4 +54,4 @@ COPY --from=build-stage /app/.nginx/nginx.conf /etc/nginx/nginx.conf
 COPY --from=build-stage /app/.nginx/snippets/general-security-headers.conf /etc/nginx/snippets/general-security-headers.conf
 
 # LetsEncrypt/Certbot configuration
-COPY --from=build-stage /app/.letsencrypt/options-ssl-nginx.conf /etc/letsencrypt/options-ssl-nginx.conf
+COPY --from=build-stage /app/.letsencrypt /etc/letsencrypt
